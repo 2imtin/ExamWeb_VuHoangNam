@@ -1,0 +1,32 @@
+﻿@model Phim
+<form asp-action="Add" method="post">
+    <h2>Thêm mới</h2>
+    <hr />
+    <div class="form-group">
+        <label>Tựa Đề</label>
+        <input asp-for="TuaDe" class="form-control" />
+        <span asp-validation-for="TuaDe" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Diễn viên</label>
+        <input asp-for="DienVien" class="form-control" />
+        <span asp-validation-for="DienVien" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Thể loại</label>
+        <input type="radio" asp-for="TrongNuoc" value="True" /> Việt Nam
+        <input type="radio" asp-for="TrongNuoc" value="False" /> Nước Ngoài
+    </div>
+    <div class="form-group">
+        <label>Thời lượng</label>
+        <input asp-for="ThoiLuong" class="form-control" />
+        <span asp-validation-for="ThoiLuong" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Giá vé</label>
+        <input asp-for="GiaVe" class="form-control" />
+        <span asp-validation-for="GiaVe" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary"> Save </button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
